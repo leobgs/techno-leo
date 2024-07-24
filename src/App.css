@@ -1,0 +1,219 @@
+/* Reset default margin dan padding untuk semua elemen */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Memastikan padding dan border tidak mempengaruhi lebar elemen */
+}
+
+/* Mengatur font dasar untuk seluruh aplikasi */
+body {
+  font-family: Arial, sans-serif; /* Ganti dengan font yang diinginkan */
+  background-color: #f8f9fa; /* Warna latar belakang aplikasi */
+  color: #333; /* Warna teks default */
+}
+
+/* Mengatur tampilan link */
+a {
+  text-decoration: none; /* Menghilangkan garis bawah pada link */
+  color: inherit; /* Menggunakan warna teks yang sama */
+}
+
+/* Mengatur tampilan tombol */
+button {
+  cursor: pointer; /* Menunjukkan bahwa tombol dapat diklik */
+}
+
+/* Mengatur tampilan gambar agar responsif */
+img {
+  max-width: 100%; /* Memastikan gambar tidak melebihi lebar kontainer */
+  height: auto; /* Menjaga rasio aspek gambar */
+}
+
+/* Gaya untuk elemen yang memiliki kelas error-message */
+.error-message {
+  color: red; /* Warna teks untuk pesan kesalahan */
+  font-size: 14px; /* Ukuran font untuk pesan kesalahan */
+  margin-top: 10px; /* Jarak atas untuk pesan kesalahan */
+}
+
+/* Gaya untuk popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Latar belakang gelap untuk popup */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Pastikan popup di atas konten lainnya */
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.close {
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Gaya untuk komponen Menu */
+#menu_screen {
+  background: rgb(248, 249, 251);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Memastikan tombol di bagian bawah */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.content {
+  overflow-y: auto; /* Konten dapat digulir secara vertikal */
+}
+
+.category-list {
+  display: flex;
+  overflow-x: auto; /* Memungkinkan pengguliran horizontal */
+  white-space: nowrap; /* Mencegah pembungkusan teks */
+  margin-bottom: 20px; /* Jarak antara kategori dan menu */
+}
+
+.category-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px; /* Padding atas dan bawah, serta kiri dan kanan */
+  margin: 5px;
+  cursor: pointer;
+  flex: 0 0 auto; /* Menghindari kategori untuk tumbuh */
+  white-space: nowrap; /* Mencegah pembungkusan teks */
+}
+
+.category-button:hover {
+  background-color: #0056b3; /* Warna saat hover */
+}
+
+.menu-items {
+  margin-top: 20px;
+}
+
+.category {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column; /* Menampilkan item menu secara vertikal */
+}
+
+.menu-item {
+  display: flex; /* Menggunakan flexbox untuk item menu */
+  align-items: center; /* Menyelaraskan item di tengah */
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #f9f9f9; /* Latar belakang item menu */
+  border-radius: 5px; /* Sudut melengkung */
+}
+
+.menu-image {
+  width: 100px; /* Ukuran gambar */
+  height: auto; /* Menjaga rasio aspek gambar */
+  border-radius: 5px; /* Sudut melengkung gambar */
+  margin-right: 15px; /* Jarak antara gambar dan teks */
+}
+
+.menu-details {
+  flex: 1; /* Membuat bagian detail menu mengambil ruang yang tersisa */
+}
+
+.menu-description {
+  font-size: 12px; /* Ukuran font untuk deskripsi */
+  color: #555; /* Warna teks deskripsi */
+  margin: 0; /* Menghilangkan margin */
+}
+
+.menu-price {
+  font-weight: bold; /* Membuat harga lebih menonjol */
+  align-self: flex-end; /* Menyelaraskan harga ke kanan */
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px; /* Jarak dari konten */
+}
+
+.nav-icon {
+  width: 50px; /* Ukuran ikon */
+  height: auto;
+}
+
+/* Gaya untuk komponen Login */
+#mobile_screen {
+  background: rgb(248, 249, 251);
+  height: 100vh;
+  display: flex;
+  justify-content: center; /* Memusatkan konten secara horizontal */
+  align-items: center; /* Memusatkan konten secara vertikal */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 375px; /* Maksimal lebar untuk perangkat mobile */
+  text-align: center; /* Menyelaraskan teks di tengah */
+}
+
+.logo {
+  width: 100%; /* Membuat gambar logo responsif */
+  height: auto; /* Menjaga rasio aspek gambar */
+  margin-bottom: 20px; /* Jarak antara logo dan form */
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  width: 100%; /* Menggunakan lebar penuh */
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  width: 100%; /* Menggunakan lebar penuh */
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #007bff99; /* Warna saat tombol dinonaktifkan */
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+}
