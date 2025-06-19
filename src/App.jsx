@@ -9,7 +9,6 @@ const App = () => {
   const accessToken = useSelector((state) => state.auth.access_token);
 
   return (
-    // Mengatur routing hehe
     <Router>
       <div>
         <Routes>
